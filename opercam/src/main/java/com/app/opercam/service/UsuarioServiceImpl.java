@@ -26,11 +26,11 @@ public class UsuarioServiceImpl implements IUsuarioService {
 	}
 
 	@Override
-	public Optional<Usuario> findByName(String name) {
+	public Usuario findByName(String name) {
 		List<Usuario> usuarios = (List<Usuario>) usuarioRepository.findAll();
 		Usuario usuario = null;
 		for (Usuario user : usuarios) if (user.getNombreUsuario().equalsIgnoreCase(name)) usuario = user;
-		return Optional.of(usuario);
+		return usuario;
 	}
 
 }

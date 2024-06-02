@@ -15,7 +15,7 @@ public class OpercamController {
 	
 	@GetMapping("/home")
 	public String home (Model model) {
-		
+		model.addAttribute("nombre",usuarioService.findByName("Manuel Ramirez").getNombreUsuario());
 		return "home.html";
 	}
 	
