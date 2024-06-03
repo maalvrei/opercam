@@ -8,5 +8,5 @@ public interface IUsuarioService {
 
 	Optional<Usuario> findById(Long id);
 	Iterable<Usuario> findAll();
-	Usuario findByName(String name);
+	Optional<Usuario> findByName(String name);
 }
