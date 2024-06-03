@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th='http://thymeleaf.org'>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<link th:href="@{/css/estilos_login.css}" rel="stylesheet">
+</head>
+<body>
+<header>
+<figure>
+<img th:src="@{/images/OPERCAM_BIGLOGO.png}">
+</figure>
+</header>
+<main>
+<section>
+<div id="formDiv">
+<form id="formularioLogin" th:action="@{/vfCreada}" th:object="${datosLogin}" method="post">
+<p>Usuario: </p>
+<input type="email" th:field="*{user}" placeholder="Tu correo electrónico">
+<p>Contraseña: </p>
+<input type="password" th:field="*{password}" placeholder="Tu contraseña">
+<div id="botonAcceder">
+<input class="boton" type="submit" value="ACCEDER"></div>
+</form>
+</div>
+</section>
+</main>
+</body>
+</html>
