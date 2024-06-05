@@ -49,4 +49,12 @@ public class CredencialServiceImpl implements ICredencialService {
 		return Optional.of(credencial);
 	}
 
+	@Override
+	public boolean verificarCredencial(String email, String password) {
+		Optional<Credencial> c = findByEmail(email);
+		if (!(c.get()==null))
+			if (c.get().getContrasena().equalsIgnoreCase(password)) return true;
+		return false;
+	}
+
 }

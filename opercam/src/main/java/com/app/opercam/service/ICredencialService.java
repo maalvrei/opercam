@@ -11,5 +11,6 @@ public interface ICredencialService {
 	Iterable<Credencial> findAll();
 	Optional<Credencial> findByUser(Usuario user);
 	Optional<Credencial> findByEmail(String email);
+	boolean verificarCredencial(String email, String password);
 	
 }
