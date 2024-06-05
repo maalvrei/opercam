@@ -29,8 +29,6 @@ h1 {
 .puesto {
 	background-color: white;
 	width: 15%;
-	display: flex;
-	flex-direction: column;
 	text-align:center;
 	border-radius: 20px; /* Bordes redondeados */
     border: 2px solid rgba(110, 117, 122, 0.5); /* Borde de color 6E757A con 50% de opacidad */
@@ -40,4 +38,10 @@ h1 {
     font-weight: bold; /* Hace el texto en negrita */
     color: #02C3CD;
     font-size: 20px;   /* Aplica el color 02C3CD */
+}
+
+h2 {
+	text-align:center;
+	color: #70747A;
+	font-size: 35px;
 }
