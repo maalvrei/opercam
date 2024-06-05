@@ -39,21 +39,20 @@ public class CredencialServiceImpl implements ICredencialService {
 	}
 
 	@Override
-	public Optional<Credencial> findByEmail(String email) {
+	public Credencial findByEmail(String email) {
 		Credencial credencial = null;
-		List<Credencial> list = (List<Credencial>) credencialRepository.findAll();
+		List<Credencial> list = (List<Credencial>) findAll();
 		for (Credencial c : list) {
 			if (c.getEmail().equalsIgnoreCase(email)) credencial = c;
-			
 		}
-		return Optional.of(credencial);
+		return credencial == null ? null: credencial;
 	}
 
 	@Override
 	public boolean verificarCredencial(String email, String password) {
-		Optional<Credencial> c = findByEmail(email);
-		if (!(c.get()==null))
-			if (c.get().getContrasena().equalsIgnoreCase(password)) return true;
+		Credencial c = findByEmail(email);
+		if (!(c==null))
+			if (c.getContrasena().equalsIgnoreCase(password)) return true;
 		return false;
 	}
 

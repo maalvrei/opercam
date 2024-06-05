@@ -14,7 +14,7 @@
 	<main>
 		<section>
 			<div id="formDiv">
-				<form id="formularioLogin" th:action="@{/login}"
+				<form id="formularioLogin" th:action="@{/home}"
 					th:object="${datosLogin}" method="post">
 					<p>Usuario:</p>
 					<input type="email" th:field="*{user}"

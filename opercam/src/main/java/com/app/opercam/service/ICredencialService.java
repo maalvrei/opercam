@@ -10,7 +10,7 @@ public interface ICredencialService {
 	Optional<Credencial> findById(Long id);
 	Iterable<Credencial> findAll();
 	Optional<Credencial> findByUser(Usuario user);
-	Optional<Credencial> findByEmail(String email);
+	Credencial findByEmail(String email);
 	boolean verificarCredencial(String email, String password);
 	
 }

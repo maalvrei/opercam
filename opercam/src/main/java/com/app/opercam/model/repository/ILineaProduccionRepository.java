@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.app.opercam.model.entity.LineaProduccion;
 
-public interface ILineaProduccionRepository extends CrudRepository<LineaProduccion, Integer> {
+public interface ILineaProduccionRepository extends CrudRepository<LineaProduccion, Long> {
 
 }

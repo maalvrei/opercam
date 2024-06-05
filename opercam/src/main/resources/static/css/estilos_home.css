@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+html {
+	background-color: #EDEBC1;
+	font-family: 'League Spartan', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+h1 {
+	font-size: 65px;
+	color: #70747A;
+}
+
+#puestos {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.puesto {
+	background-color: white;
+	width: 15%;
+	display: flex;
+	flex-direction: column;
+	text-align:center;
+	border-radius: 20px; /* Bordes redondeados */
+    border: 2px solid rgba(110, 117, 122, 0.5); /* Borde de color 6E757A con 50% de opacidad */
+}
+
+.puesto p {
+    font-weight: bold; /* Hace el texto en negrita */
+    color: #02C3CD;
+    font-size: 20px;   /* Aplica el color 02C3CD */
+}
