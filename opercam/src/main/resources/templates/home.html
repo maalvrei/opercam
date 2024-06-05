@@ -56,6 +56,16 @@
 			</div>
 		</div>
 	</section>
-	<h2>o selecciona un tipo de producto</h2>
+	<section id="filtro">
+		<h2>o selecciona un tipo de producto</h2>
+		<form id="filtros" th:action="@{/puestoFiltrado}">
+			<select id="producto" name="producto">
+				<option value="HC 23">HC 23</option>
+				<option value="HC 27">HC 27</option>
+				<option value="HC 23 PRO">HC 23 PRO</option>
+				<option value="HC 26 PRO">HC 26 PRO</option>
+			</select> <input class="boton" type="submit" value="FILTRAR">
+		</form>
+	</section>
 </main>
 </html>
