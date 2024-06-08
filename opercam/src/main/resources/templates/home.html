@@ -16,6 +16,9 @@
 <main>
 	<section id="puestos">
 		<div class="puesto">
+		<div class="href-container">
+		<a class ="custom-link" th:href="@{/puesto/1}">Puesto 1</a>
+		</div>
 			<div>
 				<div th:each="linea : ${puesto1}">
 					<p th:text="${linea.numeroLinea}"></p>
@@ -24,6 +27,9 @@
 			</div>
 		</div>
 		<div class="puesto">
+		<div class="href-container">
+		<a class ="custom-link" th:href="@{/puesto/2}">Puesto 2</a>
+		</div>
 			<div>
 				<div th:each="linea : ${puesto2}">
 					<p th:text="${linea.numeroLinea}"></p>
@@ -32,6 +38,9 @@
 			</div>
 		</div>
 		<div class="puesto">
+		<div class="href-container">
+		<a class ="custom-link" th:href="@{/puesto/3}">Puesto 3</a>
+		</div>
 			<div>
 				<div th:each="linea : ${puesto3}">
 					<p th:text="${linea.numeroLinea}"></p>
@@ -40,6 +49,9 @@
 			</div>
 		</div>
 		<div class="puesto">
+		<div class="href-container">
+		<a class ="custom-link" th:href="@{/puesto/4}">Puesto 4</a>
+		</div>
 			<div>
 				<div th:each="linea : ${puesto4}">
 					<p th:text="${linea.numeroLinea}"></p>
@@ -48,6 +60,9 @@
 			</div>
 		</div>
 		<div class="puesto">
+		<div class="href-container">
+		<a class ="custom-link" th:href="@{/puesto/5}">Puesto 5</a>
+		</div>
 			<div>
 				<div th:each="linea : ${puesto5}">
 					<p th:text="${linea.numeroLinea}"></p>
@@ -58,7 +73,7 @@
 	</section>
 	<section id="filtro">
 		<h2>o selecciona un tipo de producto</h2>
-		<form id="filtros" th:action="@{/puestoFiltrado}">
+		<form id="filtros" th:action="@{/puesto/filtro}">
 			<select id="producto" name="producto">
 				<option value="HC 23">HC 23</option>
 				<option value="HC 27">HC 27</option>

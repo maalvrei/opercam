@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th='http://thymeleaf.org'>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link th:href="@{/css/estilos_puesto.css}" rel="stylesheet">
+</head>
+<body>
+<div th:each="rechazo: ${rechazos}"></div>
+<p th:text="${rechazo.porcentajeFrame}"></p>
+</body>
+</html>

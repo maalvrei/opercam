@@ -55,18 +55,32 @@ h1 {
 	background-color: white;
 	width: 15%;
 	text-align:center;
-	border-radius: 20px; /* Bordes redondeados */
-    border: 2px solid rgba(110, 117, 122, 0.5); /* Borde de color 6E757A con 50% de opacidad */
+	border-radius: 20px;
+    border: 2px solid rgba(110, 117, 122, 0.5); 
 }
 
 .puesto p {
-    font-weight: bold; /* Hace el texto en negrita */
+    font-weight: bold; 
     color: #02C3CD;
-    font-size: 20px;   /* Aplica el color 02C3CD */
+    font-size: 20px;   
 }
 
-h2 {
-	text-align:center;
+a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.href-container {
+	margin-top: 5px;
+}
+
+a.custom-link {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 35px;
+    color: #70747A;
+    font-weight: bold; 
+}
+
+h2{
 	color: #70747A;
-	font-size: 35px;
 }

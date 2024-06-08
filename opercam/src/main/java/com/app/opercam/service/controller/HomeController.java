@@ -27,7 +27,7 @@ public class HomeController {
 			model.addAttribute("puesto4",lineaProduccionService.puesto4());
 			model.addAttribute("puesto5",lineaProduccionService.puesto5());
 		}
-		return credencialService.verificarCredencial(datosLogin.getUser(), datosLogin.getPassword()) ? "home.html" : "redirect:login";
+		return credencialService.verificarCredencial(datosLogin.getUser(), datosLogin.getPassword()) ? "home" : "redirect:login";
 	}
 	
 }
