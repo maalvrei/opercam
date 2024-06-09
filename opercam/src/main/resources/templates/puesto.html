@@ -7,12 +7,15 @@
 </head>
 <body>
 	<header>
-		<figure>
-			<img th:src="@{/images/OPERCAM_SMALLLOGO.png}">
-		</figure>
-		<h1>
-			PUESTO <span th:text="${puesto}"></span>
-		</h1>
+		<a th:href="@{/home}" class="back-icon"> <img
+			th:src="@{/images/back.png}" alt="Volver">
+		</a>
+		<div class="header-content">
+			<figure>
+				<img th:src="@{/images/OPERCAM_SMALLLOGO.png}" alt="Logo">
+			</figure>
+			<h1>PUESTO <span th:text="${puesto}"></span></h1>
+		</div>
 	</header>
 	<main>
 		<section id="rechazos">

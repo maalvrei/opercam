@@ -7,23 +7,23 @@
 </head>
 <body>
 	<header>
-    <a th:href="@{/login}" class="back-icon">
-        <img th:src="@{/images/back.png}" alt="Volver">
-    </a>
-    <div class="header-content">
-        <figure>
-            <img th:src="@{/images/OPERCAM_SMALLLOGO.png}" alt="Logo">
-        </figure>
-        <h1>SELECCIONA UN PUESTO DE OPERARIO</h1>
-    </div>
-</header>
-</body>
+		<a th:href="@{/login}" class="back-icon"> <img
+			th:src="@{/images/back.png}" alt="Volver">
+		</a>
+		<div class="header-content">
+			<figure>
+				<img th:src="@{/images/OPERCAM_SMALLLOGO.png}" alt="Logo">
+			</figure>
+			<h1>SELECCIONA UN PUESTO DE OPERARIO</h1>
+		</div>
+	</header>
+
 <main>
 	<section id="puestos">
 		<div>
-		<div class="href-container">
-		<a class ="custom-link" th:href="@{/puesto/1}">Puesto 1</a>
-		</div>
+			<div class="href-container">
+				<a class="custom-link" th:href="@{/puesto/1}">Puesto 1</a>
+			</div>
 			<div class="puesto">
 				<div th:each="linea : ${puesto1}">
 					<p th:text="${linea.numeroLinea}"></p>
@@ -31,10 +31,10 @@
 				</div>
 			</div>
 		</div>
-		<div >
-		<div class="href-container">
-		<a class ="custom-link" th:href="@{/puesto/2}">Puesto 2</a>
-		</div>
+		<div>
+			<div class="href-container">
+				<a class="custom-link" th:href="@{/puesto/2}">Puesto 2</a>
+			</div>
 			<div class="puesto">
 				<div th:each="linea : ${puesto2}">
 					<p th:text="${linea.numeroLinea}"></p>
@@ -42,10 +42,10 @@
 				</div>
 			</div>
 		</div>
-		<div >
-		<div class="href-container">
-		<a class ="custom-link" th:href="@{/puesto/3}">Puesto 3</a>
-		</div>
+		<div>
+			<div class="href-container">
+				<a class="custom-link" th:href="@{/puesto/3}">Puesto 3</a>
+			</div>
 			<div class="puesto">
 				<div th:each="linea : ${puesto3}">
 					<p th:text="${linea.numeroLinea}"></p>
@@ -54,9 +54,9 @@
 			</div>
 		</div>
 		<div>
-		<div class="href-container">
-		<a class ="custom-link" th:href="@{/puesto/4}">Puesto 4</a>
-		</div>
+			<div class="href-container">
+				<a class="custom-link" th:href="@{/puesto/4}">Puesto 4</a>
+			</div>
 			<div class="puesto">
 				<div th:each="linea : ${puesto4}">
 					<p th:text="${linea.numeroLinea}"></p>
@@ -64,10 +64,10 @@
 				</div>
 			</div>
 		</div>
-		<div >
-		<div class="href-container">
-		<a class ="custom-link" th:href="@{/puesto/5}">Puesto 5</a>
-		</div>
+		<div>
+			<div class="href-container">
+				<a class="custom-link" th:href="@{/puesto/5}">Puesto 5</a>
+			</div>
 			<div class="puesto">
 				<div th:each="linea : ${puesto5}">
 					<p th:text="${linea.numeroLinea}"></p>
@@ -79,14 +79,14 @@
 	<section id="filtro">
 		<h2>o selecciona un tipo de producto</h2>
 		<form id="filtros" th:action="@{/puesto/filtro}" method="post">
-    <select id="producto" name="producto">
-        <option value="HC 23">HC 23</option>
-        <option value="HC 27">HC 27</option>
-        <option value="HC 23 PRO">HC 23 PRO</option>
-        <option value="HC 26 PRO">HC 26 PRO</option>
-    </select>
-    <input class="boton" type="submit" value="FILTRAR">
-</form>
+			<select id="producto" name="producto">
+				<option value="HC 23">HC 23</option>
+				<option value="HC 27">HC 27</option>
+				<option value="HC 23 PRO">HC 23 PRO</option>
+				<option value="HC 26 PRO">HC 26 PRO</option>
+			</select> <input class="boton" type="submit" value="FILTRAR">
+		</form>
 	</section>
 </main>
+</body>
 </html>
