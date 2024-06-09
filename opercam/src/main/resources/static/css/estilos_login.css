@@ -31,22 +31,19 @@ section {
 }
 
 .boton {
-	background-color: #48C8CE; /* Color de fondo */
-	color: white; /* Color del texto */
+	background-color: #48C8CE; 
+	color: white;
 	border: 2px solid rgba(111, 116, 123, 0.7);
-	/* Borde con color especificado */
-	border-radius: 5px; /* Bordes redondeados */
-	padding: 10px 20px; /* Espacio interior: ajusta según prefieras */
-	font-size: 16px; /* Tamaño de la fuente */
-	cursor: pointer; /* Cambia el cursor al pasar por encima */
-	text-transform: uppercase; /* Convierte el texto a mayúsculas */
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-size: 16px; 
+	cursor: pointer;
+	text-transform: uppercase;
 	transition: background-color 0.3s ease;
-	/* Transición suave para hover */
 }
 
-/* Efecto al pasar el cursor por encima */
 .boton:hover {
-	background-color: #3BAFB5; /* Color de fondo ligeramente más oscuro */
+	background-color: #3BAFB5; 
 }
 
 p {
@@ -55,12 +52,12 @@ p {
 }
 
 input[type="email"], input[type="password"] {
-	width: 400px; /* Ajusta el ancho según tus necesidades */
-	height: 40px; /* Ajusta la altura según tus necesidades */
-	border-radius: 10px; /* Ajusta el radio para bordes redondeados */
-	padding: 10px; /* Espacio interior para mejor apariencia */
-	border: 1px solid #ccc; /* Añade un borde delgado */
-	font-size: 16px; /* Ajusta el tamaño de la fuente */
+	width: 400px; 
+	height: 40px; 
+	border-radius: 10px; 
+	padding: 10px; 
+	border: 1px solid #ccc; 
+	font-size: 16px; 
 }
 
 /* Añade un estilo cuando el input está enfocado */

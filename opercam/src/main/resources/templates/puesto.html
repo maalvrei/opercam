@@ -6,7 +6,41 @@
 <link th:href="@{/css/estilos_puesto.css}" rel="stylesheet">
 </head>
 <body>
-<div th:each="rechazo: ${rechazos}"></div>
-<p th:text="${rechazo.porcentajeFrame}"></p>
+	<header>
+		<figure>
+			<img th:src="@{/images/OPERCAM_SMALLLOGO.png}">
+		</figure>
+		<h1>
+			PUESTO <span th:text="${puesto}"></span>
+		</h1>
+	</header>
+	<main>
+		<section id="rechazos">
+			<div th:each="rechazo: ${rechazos}" class="lineaContainer">
+				<h2>
+					LINEA <span th:text="${rechazo.lineaProduccion.numeroLinea}"></span>
+				</h2>
+				<div class="linea">
+				<h3>RECHAZOS</h3>
+					<div class="lineaDato">
+						<p>Frame:</p>
+						<span th:text="${rechazo.porcentajeFrame}"></span>
+					</div>
+					<div class="lineaDato">
+						<p>Lid:</p>
+						<span th:text="${rechazo.porcentajeLid}"></span>
+					</div>
+					<div class="lineaDato">
+						<p>Cutter:</p>
+						<span th:text="${rechazo.porcentajeCutter}"></span>
+					</div>
+					<div class="lineaDato">
+						<p>Ensamblado:</p>
+						<span th:text="${rechazo.porcentajeEnsamblado}"></span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
 </body>
 </html>

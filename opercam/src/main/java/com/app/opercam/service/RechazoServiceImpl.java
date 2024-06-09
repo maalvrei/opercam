@@ -42,7 +42,6 @@ public class RechazoServiceImpl implements IRechazoService{
 				if (rechazo.getLineaProduccion().getNumeroLinea()==linea.getNumeroLinea()) rechazosPuesto.add(rechazo);
 			}
 		}
-		rechazosPuesto.forEach(r-> System.out.println("Rechazo :" + r.getRechazoId()));
 		return rechazosPuesto;
 	}
 
