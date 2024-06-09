@@ -14,7 +14,9 @@
 			<figure>
 				<img th:src="@{/images/OPERCAM_SMALLLOGO.png}" alt="Logo">
 			</figure>
-			<h1>PUESTO <span th:text="${puesto}"></span></h1>
+			<h1>
+				PUESTO <span th:text="${puesto}"></span>
+			</h1>
 		</div>
 	</header>
 	<main>
@@ -24,7 +26,7 @@
 					LINEA <span th:text="${rechazo.lineaProduccion.numeroLinea}"></span>
 				</h2>
 				<div class="linea">
-				<h3>RECHAZOS</h3>
+					<h3>RECHAZOS</h3>
 					<div class="lineaDato">
 						<p>Frame:</p>
 						<span th:text="${rechazo.porcentajeFrame}"></span>
@@ -42,6 +44,11 @@
 						<span th:text="${rechazo.porcentajeEnsamblado}"></span>
 					</div>
 				</div>
+			</div>
+		</section>
+		<section>
+			<div id="reclamacion">
+				<a class="boton">ABRIR UNA RECLAMACION</a>
 			</div>
 		</section>
 	</main>

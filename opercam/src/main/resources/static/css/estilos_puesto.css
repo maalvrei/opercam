@@ -14,8 +14,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
-    margin-bottom:20px;
 }
 
 .back-icon {
@@ -82,22 +80,43 @@ body {
 	width:100%;
 	display:flex;
 	flex-direction:column;
-	height: 100%;
+	height:100%;
 }
 
 main {
 	display: flex;
-	height: 30%;
-	justify-content:center;
+	justify-content:flex-start;
 	flex-direction: column;
 	align-items: center;
 	width:100%;
+	height: 100%;
 }
 
 #rechazos {
 	display: flex;
 	flex-direction: row;
-	align-items: center;
 	justify-content: space-around;
 	width:80%;
+}
+
+.boton {
+	background-color: #48C8CE; 
+	color: white;
+	border: 2px solid rgba(111, 116, 123, 0.7);
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-size: 16px; 
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: background-color 0.3s ease;
+}
+
+#reclamacion {
+	margin-top:30px;
+	text-align:center;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	width:250px;
+	height:50px;
 }
