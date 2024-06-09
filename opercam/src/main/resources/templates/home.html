@@ -7,11 +7,16 @@
 </head>
 <body>
 	<header>
-		<figure>
-			<img th:src="@{/images/OPERCAM_SMALLLOGO.png}">
-		</figure>
-		<h1>SELECCIONA UN PUESTO DE OPERARIO</h1>
-	</header>
+    <a th:href="@{/login}" class="back-icon">
+        <img th:src="@{/images/back.png}" alt="Volver">
+    </a>
+    <div class="header-content">
+        <figure>
+            <img th:src="@{/images/OPERCAM_SMALLLOGO.png}" alt="Logo">
+        </figure>
+        <h1>SELECCIONA UN PUESTO DE OPERARIO</h1>
+    </div>
+</header>
 </body>
 <main>
 	<section id="puestos">
@@ -73,14 +78,15 @@
 	</section>
 	<section id="filtro">
 		<h2>o selecciona un tipo de producto</h2>
-		<form id="filtros" th:action="@{/puesto/filtro}">
-			<select id="producto" name="producto">
-				<option value="HC 23">HC 23</option>
-				<option value="HC 27">HC 27</option>
-				<option value="HC 23 PRO">HC 23 PRO</option>
-				<option value="HC 26 PRO">HC 26 PRO</option>
-			</select> <input class="boton" type="submit" value="FILTRAR">
-		</form>
+		<form id="filtros" th:action="@{/puesto/filtro}" method="post">
+    <select id="producto" name="producto">
+        <option value="HC 23">HC 23</option>
+        <option value="HC 27">HC 27</option>
+        <option value="HC 23 PRO">HC 23 PRO</option>
+        <option value="HC 26 PRO">HC 26 PRO</option>
+    </select>
+    <input class="boton" type="submit" value="FILTRAR">
+</form>
 	</section>
 </main>
 </html>

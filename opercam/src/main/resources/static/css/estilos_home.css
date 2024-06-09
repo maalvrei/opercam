@@ -6,12 +6,29 @@ html {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width:100%;
 }
 
 header {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px; 
+    background-color:white;
+    width:100%;
+}
+
+.back-icon {
+    position: absolute;
+    top: 10px;
+    left: -500px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
