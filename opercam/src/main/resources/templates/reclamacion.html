@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th='http://thymeleaf.org'>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<main>
+<section>
+<form id="formularioReclamacion" th:action="@{/reclamacionCreada}" th:object="${reclamacion}">
+<input id="linea" type="text" th:field="*{linea}">
+<input id="descripcion" type="text" th:field="*{descripcion}">
+<input id="pieza" type="text" th:field="*{pieza}">
+<input id="creadaPor" type="text" th:field="*{creadaPor}">
+<input id="asignadaA" type="text" th:field="*{asignadaA}">
+</form>
+</section>
+</main>
+</body>
+</html>
