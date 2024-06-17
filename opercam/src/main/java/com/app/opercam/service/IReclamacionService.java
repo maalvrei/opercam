@@ -7,4 +7,5 @@ import com.app.opercam.model.entity.Reclamacion;
 public interface IReclamacionService {
 	Optional<Reclamacion> findById(Long id);
 	Iterable<Reclamacion> findAll();
+	void save(Reclamacion r);
 }

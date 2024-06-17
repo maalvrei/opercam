@@ -29,16 +29,38 @@
 						</tr>
 						<tr>
 							<td>Número de línea</td>
-							<td><input id="linea" type="text" th:field="*{linea}"></td>
+							<td>
+							<select id="linea" th:field="*{linea}">
+									<option value="2">2</option>
+									<option value="7">7</option>
+									<option value="704">704</option>
+									<option value="6">6</option>
+									<option value="611">611</option>
+									<option value="617">617</option>
+									<option value="608">608</option>
+									<option value="610">610</option>
+									<option value="75">75</option>
+									<option value="609">609</option>
+									<option value="58">58</option>
+									<option value="53">53</option>
+									<option value="606">606</option>
+									<option value="705">705</option>
+									<option value="23">23</option>
+							</select>
+							</td>
 						</tr>
 						<tr>
 							<td>Descripción</td>
-							<td><input id="descripcion" type="text"
-								th:field="*{descripcion}"></td>
+							<td><textarea id="descripcion" th:field="*{descripcion}" rows="20" cols="50"></textarea></td>
 						</tr>
 						<tr>
 							<td>Pieza</td>
-							<td><input id="pieza" type="text" th:field="*{pieza}"></td>
+							<td><select id="pieza" th:field="*{pieza}">
+									<option value="Lid">Lid</option>
+									<option value="Frame">Frame</option>
+									<option value="Cutter">Cutter</option>
+									<option value="Ensamblado">Ensamblado</option>
+							</select></td>
 						</tr>
 						<tr>
 							<td>Abierta por</td>
@@ -49,6 +71,11 @@
 							<td>Asignada a</td>
 							<td><input id="asignadaA" type="text"
 								th:field="*{asignadaA}"></td>
+						</tr>
+						<tr>
+							<td>Crear reclamacion</td>
+							<td><input type="submit"
+								value="Enviar"></td>
 						</tr>
 					</table>
 				</form>

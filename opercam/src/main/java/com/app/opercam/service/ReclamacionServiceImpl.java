@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.app.opercam.model.entity.Reclamacion;
 import com.app.opercam.model.repository.IReclamacionRepository;
@@ -22,6 +23,13 @@ public class ReclamacionServiceImpl implements IReclamacionService {
 	@Override
 	public Iterable<Reclamacion> findAll() {
 		return reclamacionRepository.findAll();
+	}
+
+	@Override
+	@Transactional
+	public void save(Reclamacion r) {
+		reclamacionRepository.save(r);
+		
 	}
 
 }
