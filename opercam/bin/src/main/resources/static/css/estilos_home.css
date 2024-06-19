@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+html {
+	background-color: #EDEBC1;
+	font-family: 'League Spartan', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width:100%;
+}
+
+body {
+	width:100%;
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:100%;
+}
+
+.back-icon {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+	font-size: 65px;
+	color: #70747A;
+}
+
+.boton {
+	background-color: #48C8CE;
+	color: white;
+	border: 2px solid rgba(111, 116, 123, 0.7);
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+	text-transform: uppercase; 
+	transition: background-color 0.3s ease;
+	margin-top:20px;
+}
+
+#puestos {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+#filtro {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#filtros {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.puesto {
+	background-color: white;
+	width: 200px;
+	text-align:center;
+	border-radius: 20px;
+    border: 2px solid rgba(110, 117, 122, 0.5); 
+}
+
+.puesto p {
+    font-weight: bold; 
+    color: #02C3CD;
+    font-size: 20px;   
+}
+
+a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+.href-container {
+	margin-top: 5px;
+	margin-bottom: 15px;
+	text-align:center;
+}
+
+a.custom-link {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 35px;
+    color: #70747A;
+    font-weight: bold;
+}
+
+h2{
+	color: #70747A;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th='http://thymeleaf.org'>
+<head>
+<meta charset="UTF-8">
+<title>Puesto de operario</title>
+<link th:href="@{/css/estilos_puesto.css}" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<a th:href="@{/home}" class="back-icon"> <img
+			th:src="@{/images/back.png}" alt="Volver">
+		</a>
+		<div class="header-content">
+			<figure>
+				<img th:src="@{/images/OPERCAM_SMALLLOGO.png}" alt="Logo">
+			</figure>
+			<h1>
+				PUESTO <span th:text="${puesto}"></span>
+			</h1>
+		</div>
+	</header>
+	<main>
+		<section id="rechazos">
+			<div th:each="rechazo: ${rechazos}" class="lineaContainer">
+				<h2>
+					LINEA <span th:text="${rechazo.lineaProduccion.numeroLinea}"></span>
+				</h2>
+				<div class="linea">
+					<h3>RECHAZOS</h3>
+					<div class="lineaDato">
+						<p>Frame:</p>
+						<span th:text="${rechazo.porcentajeFrame}"></span>
+					</div>
+					<div class="lineaDato">
+						<p>Lid:</p>
+						<span th:text="${rechazo.porcentajeLid}"></span>
+					</div>
+					<div class="lineaDato">
+						<p>Cutter:</p>
+						<span th:text="${rechazo.porcentajeCutter}"></span>
+					</div>
+					<div class="lineaDato">
+						<p>Ensamblado:</p>
+						<span th:text="${rechazo.porcentajeEnsamblado}"></span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div id="reclamacion">
+				<a th:href="@{/reclamacion}" class="boton">ABRIR UNA RECLAMACION</a>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

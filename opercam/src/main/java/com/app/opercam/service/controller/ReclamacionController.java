@@ -1,9 +1,12 @@
 package com.app.opercam.service.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import com.app.opercam.model.entity.Reclamacion;
 import com.app.opercam.service.IReclamacionService;
@@ -20,9 +23,18 @@ public class ReclamacionController {
 		return "reclamacion";
 	}
 	
-	@GetMapping("/reclamacionCreada")
+	@PostMapping("/reclamacionCreada")
 	public String reclamacionCreada (Model model, Reclamacion r) {
 		reclamacionService.save(r);
-		return "redirect:home";
+		List<Reclamacion> reclamaciones = (List<Reclamacion>) reclamacionService.findAll();
+		model.addAttribute("reclamaciones",reclamaciones);
+		return "reclamaciones";
+	}
+	
+	@GetMapping("/reclamaciones")
+	public String reclamaciones (Model model) {
+		List<Reclamacion> reclamaciones = (List<Reclamacion>) reclamacionService.findAll();
+		model.addAttribute("reclamaciones",reclamaciones);
+		return "reclamaciones";
 	}
 }

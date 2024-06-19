@@ -40,3 +40,63 @@ h1 {
 	font-size:65px;
 	color: #70747A;
 }
+
+main {
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+section {
+	width:100%;
+}
+
+/* Estilos para la tabla */
+#formularioReclamacion table {
+    width: 90%; /* Ancho del 90% del contenedor padre */
+    max-width: 800px; /* Ancho máximo de 800px */
+    margin: 20px auto; /* Centrar la tabla horizontalmente con un margen superior e inferior */
+    border-collapse: collapse; /* Combinar bordes de th y td */
+    border-radius: 10px;
+    background-color: #ffffff; /* Color de fondo blanco */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+#formularioReclamacion th,
+#formularioReclamacion td {
+    padding: 12px 15px; /* Padding más grande para las celdas */
+    text-align: left;
+    border-bottom: 1px solid #dddddd; /* Línea separadora entre filas */
+}
+
+#formularioReclamacion th {
+	color:white;
+    background-color: #48C8CE; /* Color de fondo para los encabezados */
+    font-weight: bold; /* Texto en negrita para los encabezados */
+}
+
+/* Estilos para los elementos de entrada */
+#formularioReclamacion select,
+#formularioReclamacion textarea,
+#formularioReclamacion input[type="text"],
+#formularioReclamacion input[type="submit"] {
+    width: calc(100% - 30px); /* Ancho del 100% menos el espacio de padding */
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+#formularioReclamacion input[type="submit"] {
+    width: 100%; /* Ancho automático para el botón de enviar */
+    background-color: #48C8CE;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#formularioReclamacion input[type="submit"]:hover {
+    background-color: #3CA6AB; /* Cambiar color de fondo al hacer hover */
+}
+

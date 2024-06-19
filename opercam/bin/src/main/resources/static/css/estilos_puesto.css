@@ -111,19 +111,12 @@ main {
 	transition: background-color 0.3s ease;
 }
 
- .verde {
-      color: green;
-    }
-    .rojo {
-      color: red;
-    }
-
-.reclamacion {
+#reclamacion {
 	margin-top:30px;
 	text-align:center;
 	display:flex;
 	flex-direction:column;
 	justify-content:center;
-	width:350px;
+	width:250px;
 	height:50px;
 }

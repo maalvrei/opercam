@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+html {
+	background-color: #EDEBC1;
+	font-family: 'League Spartan', sans-serif;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#formDiv {
+	width: 500px;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#botonAcceder {
+	margin-top: 35px;
+	text-align: center;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.boton {
+	background-color: #48C8CE; 
+	color: white;
+	border: 2px solid rgba(111, 116, 123, 0.7);
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-size: 16px; 
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+	background-color: #3BAFB5; 
+}
+
+p {
+	color: #70747A;
+	font-size: 25px;
+}
+
+input[type="email"], input[type="password"] {
+	width: 400px; 
+	height: 40px; 
+	border-radius: 10px; 
+	padding: 10px; 
+	border: 1px solid #ccc; 
+	font-size: 16px; 
+}
+
+/* Añade un estilo cuando el input está enfocado */
+input[type="email"]:focus, input[type="password"]:focus {
+	border-color: #666; /* Cambia el color del borde al enfocar */
+	outline: none; /* Elimina el borde de enfoque predeterminado */
+}

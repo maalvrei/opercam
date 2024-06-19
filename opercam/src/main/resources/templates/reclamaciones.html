@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th='http://thymeleaf.org'>
+<head>
+<meta charset="UTF-8">
+<title>Reclamaciones</title>
+<link th:href="@{/css/estilos_reclamaciones.css}" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<a th:href="@{/home}" class="back-icon"> <img
+			th:src="@{/images/back.png}" alt="Volver">
+		</a>
+		<div class="header-content">
+			<figure>
+				<img th:src="@{/images/OPERCAM_SMALLLOGO.png}" alt="Logo">
+			</figure>
+			<h1>RECLAMACIONES</h1>
+		</div>
+	</header>
+	<main>
+		<table>
+			<tr>
+				<th>Linea</th>
+				<th>Pieza</th>
+				<th>Descripcion</th>
+				<th>Abierta por</th>
+				<th>Asignada a</th>
+			</tr>
+			<tr th:each="reclamacion: ${reclamaciones}">
+				<td><span th:text="${reclamacion.linea}"></span></td>
+				<td><span th:text="${reclamacion.pieza}"></span></td>
+				<td><span th:text="${reclamacion.descripcion}"></span></td>
+				<td><span th:text="${reclamacion.creadaPor}"></span></td>
+				<td><span th:text="${reclamacion.asignadaA}"></span></td>
+			</tr>
+		</table>
+	</main>
+</body>
+</html>

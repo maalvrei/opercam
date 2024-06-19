@@ -29,28 +29,65 @@
 					<h3>RECHAZOS</h3>
 					<div class="lineaDato">
 						<p>Frame:</p>
-						<span th:text="${rechazo.porcentajeFrame}"></span>
+						<span class="dynamic-span" th:text="${rechazo.porcentajeFrame}"></span>
 					</div>
 					<div class="lineaDato">
 						<p>Lid:</p>
-						<span th:text="${rechazo.porcentajeLid}"></span>
+						<span class="dynamic-span" th:text="${rechazo.porcentajeLid}"></span>
 					</div>
 					<div class="lineaDato">
 						<p>Cutter:</p>
-						<span th:text="${rechazo.porcentajeCutter}"></span>
+						<span class="dynamic-span" th:text="${rechazo.porcentajeCutter}"></span>
 					</div>
 					<div class="lineaDato">
 						<p>Ensamblado:</p>
-						<span th:text="${rechazo.porcentajeEnsamblado}"></span>
+						<span class="dynamic-span" th:text="${rechazo.porcentajeEnsamblado}"></span>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section>
-			<div id="reclamacion">
+			<div class="reclamacion">
 				<a th:href="@{/reclamacion}" class="boton">ABRIR UNA RECLAMACION</a>
+			</div>
+			<div class="reclamacion">
+				<a th:href="@{/reclamaciones}" class="boton">CONSULTAR RECLAMACIONES</a>
 			</div>
 		</section>
 	</main>
 </body>
+
+<script>
+    // Función para cambiar el contenido de todos los spans con la clase 'dynamic-span'
+    function actualizarSpans() {
+      // Seleccionar todos los spans con la clase 'dynamic-span'
+      var spans = document.querySelectorAll('.dynamic-span');
+      
+      // Recorrer cada span y actualizar su contenido
+      spans.forEach(function(span) {
+        var nuevoValor = obtenerNuevoValor();
+        span.textContent = nuevoValor;
+
+        // Cambiar la clase según el valor
+        if (nuevoValor <= 0.5) {
+          span.classList.add('verde');
+          span.classList.remove('rojo');
+        } else {
+          span.classList.add('rojo');
+          span.classList.remove('verde');
+        }
+      });
+    }
+
+    // Función para obtener un nuevo valor entre 0 y 1 con dos decimales
+    function obtenerNuevoValor() {
+      var randomValue = Math.random() * 100; // Valor entre 0 y 100
+      var roundedValue = Math.round(randomValue) / 100; // Redondear y dividir para dos decimales
+      return roundedValue.toFixed(2); // Convertir a cadena con dos decimales
+    }
+
+    // Llamar a actualizarSpans cada 3 segundos (3000 milisegundos)
+    setInterval(actualizarSpans, 1000); // Cambia cada 3 segundos
+  </script>
 </html>
+

@@ -1,0 +1,77 @@
+@charset "ISO-8859-1";
+
+html {
+	background-color: #EDEBC1;
+	font-family: 'League Spartan', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width:100%;
+	height:100%;
+}
+
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.back-icon {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+	width:100%;
+	display:flex;
+	flex-direction:column;
+	height:100%;
+}
+
+h1 {
+	font-size:65px;
+	color: #70747A;
+}
+
+main {
+	width:100%;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+}
+
+table {
+	background-color:white;
+	width: 90%;
+	border-collapse: collapse;
+	border-radius: 10px;
+	overflow: hidden; /* Para que los bordes redondeados funcionen correctamente */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Opcional: para un efecto de sombra */
+	margin-top: 20px; /* Opcional: espacio entre la tabla y otros elementos */
+}
+
+th, td {
+	padding: 10px;
+	text-align: left;
+}
+
+th {
+	background-color: #48C8CE;
+	color: white;
+}
+
+tr {
+	border-bottom: 1px solid #ddd; /* Línea entre filas */
+}
+
+tr:last-child {
+	border-bottom: none; /* Quitar la última línea de borde */
+}

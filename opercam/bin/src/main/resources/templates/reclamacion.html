@@ -21,7 +21,7 @@
 		<section>
 			<div id="formulario">
 				<form id="formularioReclamacion" th:action="@{/reclamacionCreada}"
-					th:object="${reclamacion}" method="post">
+					th:object="${reclamacion}">
 					<table>
 						<tr>
 							<th>Campo</th>
@@ -51,7 +51,7 @@
 						</tr>
 						<tr>
 							<td>Descripción</td>
-							<td><textarea id="descripcion" th:field="*{descripcion}" rows="10" cols="50"></textarea></td>
+							<td><textarea id="descripcion" th:field="*{descripcion}" rows="20" cols="50"></textarea></td>
 						</tr>
 						<tr>
 							<td>Pieza</td>
