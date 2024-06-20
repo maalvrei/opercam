@@ -1,4 +1,4 @@
-package com.app.opercam.service.controller;
+package com.app.opercam.controller;
 
 import java.util.List;
 

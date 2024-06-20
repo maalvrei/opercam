@@ -1,4 +1,4 @@
-package com.app.opercam.service.controller;
+package com.app.opercam.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
